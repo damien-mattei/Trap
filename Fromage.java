@@ -1,0 +1,38 @@
+import  java.awt.Color;
+
+public class Fromage {
+  
+  int x, y;  // position
+  int poids; // 1,2 ou 3 tiers du poids total
+
+  public Fromage (int x, int y) {
+    this.x = x;
+    this.y = y;
+    this.poids=3;
+  }
+
+ // Methodes publiques
+  public int getX() {
+    return x;
+  }
+  
+  public int getY() {
+    return y;
+  }
+
+  public int getPoids() {
+    return poids;
+  }
+  
+  public void grignoter() {
+    if (getPoids()>0)
+      poids--;
+    else return;
+  }
+  
+  Color getCouleur() {
+    return Color.yellow;
+  }
+
+}
+
